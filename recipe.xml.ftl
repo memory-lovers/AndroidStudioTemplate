@@ -18,7 +18,7 @@
     <instantiate from="res/layout/activity_simple.xml.ftl"
                    to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 
-    <instantiate from="src/app_package/SimpleActivity.java.ftl"
+           <instantiate from="src/app_package/activity/SimpleActivity.java.ftl"
                    to="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
 
     <open file="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
