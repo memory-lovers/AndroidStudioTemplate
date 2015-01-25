@@ -15,7 +15,7 @@
     <merge from="res/values-w820dp/dimens.xml"
              to="${escapeXmlAttribute(resOut)}/values-w820dp/dimens.xml" />
 
-     <!-- custom instantiate -->
+     <!-- custom instantiate {{{ -->
      <!-- activity/  -->
     <instantiate from="res/layout/activity_simple.xml.ftl"
                    to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
@@ -38,6 +38,24 @@
     <!-- database/entity -->
     <instantiate from="src/app_package/database/entity/package-info-database-entity.java.ftl"
             to="${escapeXmlAttribute(srcOut)}/database/entity/package-info.java" />
+
+    <!-- dialog -->
+    <instantiate from="src/app_package/dialog/package-info-dialog.java.ftl"
+            to="${escapeXmlAttribute(srcOut)}/dialog/package-info.java" />
+
+    <!-- service -->
+    <instantiate from="src/app_package/service/package-info-service.java.ftl"
+            to="${escapeXmlAttribute(srcOut)}/service/package-info.java" />
+
+    <!-- adapter -->
+    <instantiate from="src/app_package/adapter/package-info-adapter.java.ftl"
+            to="${escapeXmlAttribute(srcOut)}/adapter/package-info.java" />
+
+    <!-- asynctask -->
+    <instantiate from="src/app_package/asynctask/package-info-asynctask.java.ftl"
+            to="${escapeXmlAttribute(srcOut)}/asynctask/package-info.java" />
+
+    <!-- }}} custom instantiate -->
 
     <open file="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
     <open file="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
